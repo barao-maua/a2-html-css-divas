@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GatinhosUOL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: #ffc0cb;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .descricao {
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .descricao h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .descricao h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .descricao p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .conheca-section {
+            margin: 40px 0;
+        }
+
+        .conheca-section h2 {
+            text-align: center;
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+        }
+
+        .gatos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .gato-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gato-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .gato-imagem {
+            width: 140%;
+            height: 280px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.1em;
+            overflow: hidden;
+        }
+
+        .gato-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gato-info {
+            padding: 20px;
+        }
+
+        .gato-info h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .gato-info p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .gato-link {
+            display: inline-block;
+            background: #ffc0cb;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .gato-link:hover {
+            opacity: 0.9;
+        }
+
+        .meme-section {
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .meme-section h2 {
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+
+        .meme-imagem {
+            max-width: 50%;
+            max-height: 200px;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            display: inline-block;
+        }
+
+        .meme-imagem img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .gatos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .descricao {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> GatinhosUOL </h1>
+        <p>Venha você também ter um gatinho!</p>
+    </header>
+
+    <div class="container">
+        <section class="descricao">
+            <h2>Sobre os gatos</h2>
+            
+            <h3>O que os gatinhos gostam?</h3>
+            <p>
+                Os gatinhos adoram brincar com tudo que se mexe, perseguir cordões, explorar novos espaços e cheirar tudo que lhes convém. 
+                Eles são curiosos por natureza e gostam de se espreguiçar em lugares altos arriscando suas 7 vidas. 
+                Os mimos e carinhos também são essenciais para o bem-estar de um gatinho feliz!
+            </p>
+
+            <h3>Motivos para ter um gato</h3>
+            <p>
+                Ter um gato como companheiro é uma experiência incrível! Eles são independentes mas carinhosos, 
+                trazem alegria para casa e ajudam a reduzir o estresse. Além disso, são animais inteligentes, divertidos 
+                e podem viver muitos anos ao seu lado, criando memórias preciosas. Um gato é muito mais que um animal de estimação, 
+                é um membro especial da família!
+            </p>
+        </section>
+
+        <section class="conheca-section">
+            <h2>Conheça alguns deles!</h2>
+            
+            <div class="gatos-grid">
+                <!-- Gato Rajado -->
+                <div class="gato-card">
+                    <div class="gato-imagem">
+                        <img src="https://arcadenoe.pt/storage/wysiwyg/8/eb/8eba53ddf067e2dbff889282c146083d.jpeg" alt="Gato Rajado">
+                    </div>
+                    <div class="gato-info">
+                        <h3>Tartaruga</h3>
+                        <p>
+                            O clássico gato tartaruga é cheio de energia e personalidade. Conhecidos por sua inteligência 
+                            e brincadeiras divertidas, os gatos tartarugas conquistam corações com sua natureza curiosa.
+                        </p>
+                        <a href="gatin_raj.html" class="gato-link">Saiba mais</a>
+                    </div>
+                </div>
+
+                <!-- Gato Preto -->
+                <div class="gato-card">
+                    <div class="gato-imagem">
+                        <img src="https://blog-static.petlove.com.br/wp-content/uploads/2022/05/gato-preto-deitado-Petlove.jpg" alt="Gato Preto">
+                    </div>
+                    <div class="gato-info">
+                        <h3>Preto</h3>
+                        <p>
+                            Misteriosos e elegantes, os gatos pretos trazem um toque de sofisticação. Apesar das superstições, 
+                            são gatos extremamente carinhosos e leais, perfeitos para acompanhar você em qualquer aventura.
+                        </p>
+                        <a href="indexBia.html" class="gato-link">Saiba mais</a>
+                    </div>
+                </div>
+
+                <!-- Gato Laranja -->
+                <div class="gato-card">
+                    <div class="gato-imagem">
+                        <img src="https://img.odcdn.com.br/wp-content/uploads/2024/12/shutterstock_1918241228.jpg" alt="Gato Laranja">
+                    </div>
+                    <div class="gato-info">
+                        <h3>Laranja</h3>
+                        <p>
+                            Gatos laranjas são conhecidos por sua personalidade vibrante e amigável. São extremamente sociáveis, 
+                            adoram atenção e brincadeiras. Sua cor quente reflete sua natureza afetuosa e alegre.
+                        </p>
+                        <a href="gatin_laranja.html" class="gato-link">Saiba mais</a>
+                    </div>
+                </div>
+
+                <!-- Gato Frajola (branco/tricolor) -->
+                <div class="gato-card">
+                    <div class="gato-imagem">
+                        <img src="https://i.pinimg.com/originals/fe/17/31/fe1731ab143bd737c372fe9931a34e54.jpg" alt="faj">
+                    </div>
+                    <div class="gato-info">
+                        <h3>Frajola</h3>
+                        <p>
+                            Delicados e graciosos, os gatos frajola são verdadeiras joias. Com sua coloração única, 
+                            combinam beleza e personalidade marcante. São gatos cheios de charme e carisma.
+                        </p>
+                        <a href="gatin_fraj.html" class="gato-link">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="meme-section">
+            <h2> Legal, né? </h2>
+            <div class="meme-imagem">
+                <img src="https://pbs.twimg.com/media/G-_SEyPW4AE8iPJ.jpg" alt="legal ne">
+            </div>
+        </section>
+    </div>
+</body>
+</html>
